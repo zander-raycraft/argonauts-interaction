@@ -1,0 +1,214 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.app-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100vw;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.content-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: transparent;
+  border-radius: 0;
+  overflow: visible;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.header {
+  background-color: #ffdcaa;
+  padding: 1rem 2rem;
+  text-align: left;
+}
+
+.header h2 {
+  font-size: clamp(1.2rem, 3vw, 2rem);
+  font-weight: bold;
+  color: #1e3c23;
+  font-family: 'Oswald', sans-serif;
+}
+
+.tree-emoji {
+  font-size: clamp(2rem, 3vw, 1rem);
+}
+
+.main-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: clamp(2rem, 8vw, 5rem) clamp(1rem, 5vw, 3rem);
+  background-color: rgba(30, 60, 35, 0.9); 
+  color: #fff;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+
+.text-section {
+  width: 100%;
+  max-width: 50%;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 2rem;
+}
+
+.text-section h1 {
+  font-size: clamp(3rem, 5vw, 4.5rem);
+  margin-bottom: clamp(0.2rem, 1vw, 5rem);
+  margin-top: -12rem;
+  font-weight: bold;
+  color: #ffdcaa;
+  font-family: 'Almendra', serif;
+  line-height: 1.2;
+  text-align: left;
+}
+
+.text-section p {
+  font-size: clamp(0.9rem, 2.5vw, 1.5rem);
+  line-height: 1.6;
+  margin-bottom: clamp(1rem, 3vw, 2rem);
+  max-width: 80%;
+}
+
+.start-button {
+  background-color: #ffdcaa;
+  color: #333;
+  position: relative;
+  left: 15%;
+  border: 2px solid transparent;
+  padding: clamp(0.5rem, 1.5vw, 1rem) clamp(2rem, 4vw, 4rem);
+  font-size: clamp(0.8rem, 2vw, 1rem);
+  min-width: clamp(10rem, 20vw, 15rem);
+  border-radius: 2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  margin-top: 0.5rem;
+}
+
+.start-button:hover {
+  background-color: rgba(30, 60, 35, 0.7);
+  border-color: #ffdcaa;
+  color: #ffdcaa;
+}
+
+.image-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 40%;
+  height: 100%;
+  margin-bottom: 2rem;
+}
+
+.circular-image {
+  width: 100%;
+  max-width: clamp(15rem, 30vw, 25rem);
+  height: 120%;
+  border-radius: 50%;
+  object-fit: cover;
+  transform: scaleY(1.5);
+  margin-top: -5%;
+  margin-bottom: 2rem;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .content-container {
+    width: 95%;
+  }
+
+  .main-content {
+    flex-direction: column;
+    padding: clamp(0.5rem, 3vw, 2rem);
+    background-color: rgba(30, 60, 35, 0.9);
+  }
+
+  .text-section {
+    max-width: 100%;
+    text-align: left;
+    margin-top: 1rem;
+  }
+
+  .text-section h1 {
+    font-size: clamp(1.2rem, 4vw, 2.5rem);
+  }
+
+  .text-section p {
+    font-size: clamp(0.8rem, 2vw, 1.1rem);
+    max-width: 90%;
+  }
+
+  .start-button {
+    padding: clamp(0.4rem, 1.2vw, 0.8rem) clamp(1.5rem, 3vw, 3rem);
+    font-size: clamp(0.7rem, 1.8vw, 0.9rem);
+    min-width: clamp(8rem, 15vw, 12rem);
+    left: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .image-section {
+    max-width: 60%;
+    margin-top: clamp(1rem, 3vw, 2rem);
+  }
+
+  .circular-image {
+    max-width: clamp(10rem, 25vw, 15rem);
+  }
+}
+
+@media (max-width: 480px) {
+  .content-container {
+    width: 98%;
+  }
+
+  .header {
+    padding: 0.5rem 1rem;
+  }
+
+  .header h2 {
+    font-size: clamp(0.9rem, 2vw, 1.2rem);
+  }
+
+  .main-content {
+    padding: clamp(0.3rem, 2vw, 1.5rem);
+    background-color: rgba(30, 60, 35, 0.9);
+  }
+
+  .image-section {
+    max-width: 70%;
+  }
+
+  .circular-image {
+    max-width: clamp(8rem, 20vw, 12rem);
+  }
+
+  .start-button {
+    padding: clamp(0.4rem, 1.2vw, 0.8rem) clamp(1rem, 2.5vw, 2rem);
+    min-width: clamp(6rem, 12vw, 10rem);
+  }
+
+  .text-section {
+    margin-top: 0.5rem;
+  }
+
+  .text-section p {
+    max-width: 90%;
+  }
+}
