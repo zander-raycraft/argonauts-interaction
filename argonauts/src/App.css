@@ -53,8 +53,8 @@
   padding: clamp(2rem, 8vw, 5rem) clamp(1rem, 5vw, 3rem);
   background-color: rgba(30, 60, 35, 0.9); 
   color: #fff;
-  border-bottom-left-radius: 1rem;
-  border-bottom-right-radius: 1rem;
+  border-bottom-left-radius: 3rem;
+  border-bottom-right-radius: 3rem;
 }
 
 .text-section {
